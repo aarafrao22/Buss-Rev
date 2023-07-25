@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapViewerActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/MainSupportMapFragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:mapType="normal"
+            app:uiCompass="true"
+            app:uiRotateGestures="true"
+            app:uiScrollGestures="true"
+            app:uiTiltGestures="true"
+            app:uiZoomControls="true"
+            app:uiZoomGestures="true" />
+
+        <LinearLayout
+            android:id="@+id/MainLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/SearchBar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:autofillHints="postalAddress"
+                android:background="@drawable/edit_text_design"
+                android:ems="10"
+                android:textColorHint="#838282"
+                android:hint="@string/map_viewer_activity_search_bar_hint_text"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:imeOptions="actionSearch" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/SearchBarResultsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <ScrollView
+                android:id="@+id/SelectedLocationScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/SelectedLocationLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/card_design_settings"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageButton
+                        android:id="@+id/SelectedLocationCloseButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/button_design"
+                        android:contentDescription="This button is a close button. It will close or hide the selected location details card once it is pressed."
+                        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+                    <TextView
+                        android:id="@+id/SelectedLocationNameTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:maxLines="100"
+                        android:scrollHorizontally="false"
+                        android:text="@string/selected_location_name"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/SelectedLocationAddressTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="100"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:scrollHorizontally="false"
+                        android:text="@string/address_placeholder"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/SelectedLocationPostalCodeTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:maxLines="100"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:scrollHorizontally="false"
+                        android:text="@string/postal_code"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/ToggleLocationFavouriteStatusButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/button_design"
+                        android:text="@string/toggle_location_favourite_status_button_add_mode_text"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/ActivityNavigationButtonsLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/ReturnToFavouriteLocationsActivityButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_design"
+                    android:text="@string/return_to_favourite_locations_activity_button" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

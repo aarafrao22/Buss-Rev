@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@drawable/border">
+
+    <ImageView
+        android:id="@+id/roadimages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/baseline_arrow_outward_24" />
+
+    <TextView
+        android:id="@+id/directionname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/roadimages"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
+        android:text="0 km"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/ServiceNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/roadimages"
+        android:text="Service Code"
+        android:textColor="#fff"
+        android:textSize="13dp" />
+
+    <ImageView
+        android:id="@+id/AM_Peak_Freqlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/ServiceNo"
+        android:src="@drawable/baseline_directions_bus_filled_24"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/WD_FirstBus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/AM_Peak_Freqlabel"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/ServiceNo"
+        android:text="5-08"
+        android:textColor="#fff"
+        android:textSize="25px" />
+
+    <ImageView
+        android:id="@+id/AM_Offpeak_Freqlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/AM_Peak_Freqlabel"
+        android:src="@drawable/baseline_directions_bus_filled_24"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/WD_LastBus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/AM_Peak_Freqlabel"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/AM_Peak_Freqlabel"
+        android:text="5-08"
+        android:textColor="#fff"
+        android:textSize="25px" />
+
+    <ImageView
+        android:id="@+id/PM_Peak_Freqlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/AM_Offpeak_Freqlabel"
+        android:src="@drawable/baseline_directions_bus_filled_24"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/SAT_FirstBus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/AM_Peak_Freqlabel"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/AM_Offpeak_Freqlabel"
+        android:text="5-08"
+        android:textColor="#fff"
+        android:textSize="25px" />
+
+    <ImageView
+        android:id="@+id/PM_Offpeak_Freqlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/PM_Peak_Freqlabel"
+        android:src="@drawable/baseline_directions_bus_filled_24"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/SAT_LastBus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/AM_Peak_Freqlabel"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/PM_Peak_Freqlabel"
+        android:text="5-08"
+        android:textColor="#fff"
+        android:textSize="25px" />
+
+
+    <ImageView
+        android:id="@+id/PM_Offpeak_Freqlabel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/PM_Offpeak_Freqlabel"
+        android:src="@drawable/baseline_directions_bus_filled_24"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/SUN_FirstBus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/AM_Peak_Freqlabel"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/PM_Offpeak_Freqlabel"
+        android:text="5-08"
+        android:textColor="#fff"
+        android:textSize="25px" />
+
+
+    <ImageView
+        android:id="@+id/PM_Offpeak_Freqlabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/PM_Offpeak_Freqlabel1"
+        android:src="@drawable/baseline_directions_bus_filled_24"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/SUN_LastBus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/AM_Peak_Freqlabel"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/PM_Offpeak_Freqlabel1"
+        android:text="5-08"
+        android:textColor="#fff"
+        android:textSize="25px" />
+</RelativeLayout>

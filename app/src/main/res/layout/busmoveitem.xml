@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:minHeight="70dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linear_layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#1A549A">
+
+            <ImageView
+                android:id="@+id/roadimages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_directions_24"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_editor_absoluteY="10dp" />
+
+            <TextView
+                android:id="@+id/directionname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#fff"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="21dp"
+                tools:layout_editor_absoluteY="30dp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ServiceNo"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:id="@+id/ServiceNo"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="60dp"
+                tools:layout_editor_absoluteY="8dp" />
+
+            <TextView
+                android:id="@+id/Category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TRUNK"
+                android:textColor="#fff"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="60dp"
+                tools:layout_editor_absoluteY="30dp" />
+
+            <ImageView
+                android:id="@+id/AM_Peak_Freqlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_access_time_filled_24"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="180dp"
+                tools:layout_editor_absoluteY="10dp" />
+
+            <TextView
+                android:id="@+id/AM_Peak_Freqvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5-08"
+                android:textColor="#fff"
+                android:textSize="25px"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="180dp"
+                tools:layout_editor_absoluteY="35dp" />
+
+
+            <ImageView
+                android:id="@+id/AM_Offpeak_Freqlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/AM_Peak_Freqlabel"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_baseline_access_time_filled_24"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="220dp"
+                tools:layout_editor_absoluteY="10dp" />
+
+            <TextView
+                android:id="@+id/AM_Offpeak_Freqvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5-08"
+                android:textColor="#fff"
+                android:textSize="25px"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="220dp"
+                tools:layout_editor_absoluteY="35dp" />
+
+            <ImageView
+                android:id="@+id/PM_Peak_Freqlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_access_time_filled_24"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="260dp"
+                tools:layout_editor_absoluteY="10dp" />
+
+            <TextView
+                android:id="@+id/PM_Peak_Freqvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5-08"
+                android:textColor="#fff"
+                android:textSize="25px"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="260dp"
+                tools:layout_editor_absoluteY="35dp" />
+
+            <ImageView
+                android:id="@+id/PM_Offpeak_Freqlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_access_time_filled_24"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="300dp"
+                tools:layout_editor_absoluteY="10dp" />
+
+            <TextView
+                android:id="@+id/PM_Offpeak_Freqvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5-08"
+                android:textColor="#fff"
+                android:textSize="25px"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="300dp"
+                tools:layout_editor_absoluteY="35dp" />
+
+            <TextView
+                android:id="@+id/OriginCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OriginCode"
+                android:textColor="#fff"
+                android:textSize="25px"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="340dp"
+                tools:layout_editor_absoluteY="30dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/expandable_layout">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/child_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
